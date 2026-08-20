@@ -2459,7 +2459,7 @@ async def _process_card_inner(cc, mes, ano, cvv, ourl, variant_id=None, proxy_st
                 except json.JSONDecodeError:
                     return False, f"Invalid JSON in submit response: idk", gateway, total_price, currency
                 except Exception as e:
-                    return False, f"Error parsing submit: idk}", gateway, total_price, currency
+                    return False, "Error parsing submit: idk}", gateway, total_price, currency
 
             params = {'operationName': 'PollForReceipt'}
             poll_json_data = {
